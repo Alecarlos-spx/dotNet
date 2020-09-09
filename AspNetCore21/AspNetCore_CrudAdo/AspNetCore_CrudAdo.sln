@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_CrudAdo", "AspNetCore_CrudAdo\AspNetCore_CrudAdo.csproj", "{C72A138D-BF47-4004-98E8-79EAB6DA3515}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C72A138D-BF47-4004-98E8-79EAB6DA3515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72A138D-BF47-4004-98E8-79EAB6DA3515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72A138D-BF47-4004-98E8-79EAB6DA3515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72A138D-BF47-4004-98E8-79EAB6DA3515}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E67632F-CB37-417B-827E-B41C7462E79D}
+	EndGlobalSection
+EndGlobal
