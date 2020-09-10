@@ -59,6 +59,10 @@ namespace AspNetCore_CrudAdo.Models
                 {
                     throw;
                 }
+                finally
+                {
+                    conexao.Close();
+                }
                 return ListaClientes;
 
             }
@@ -68,21 +72,34 @@ namespace AspNetCore_CrudAdo.Models
         {
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
-                string comandoSql = "insert into Clientes (Nome, Endereco, Numero, Complemento, Cidade, Estado, Cep) Values(@Nome, @Endereco, @Numero, @Complemento, @Cidade, @Estado, @Cep)";
-                SqlCommand cmd = new SqlCommand(comandoSql, conexao);
-                cmd.CommandType = CommandType.Text;
+                try
+                {
+                    string comandoSql = "insert into Clientes (Nome, Endereco, Numero, Complemento, Cidade, Estado, Cep) Values(@Nome, @Endereco, @Numero, @Complemento, @Cidade, @Estado, @Cep)";
+                    SqlCommand cmd = new SqlCommand(comandoSql, conexao);
+                    cmd.CommandType = CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
-                cmd.Parameters.AddWithValue("@Endereco", cliente.Endereco);
-                cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
-                cmd.Parameters.AddWithValue("@Complemento", cliente.Complemento);
-                cmd.Parameters.AddWithValue("@Cidade", cliente.Cidade);
-                cmd.Parameters.AddWithValue("@Estado", cliente.Estado);
-                cmd.Parameters.AddWithValue("@Cep", cliente.Cep);
+                    cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
+                    cmd.Parameters.AddWithValue("@Endereco", cliente.Endereco);
+                    cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
+                    cmd.Parameters.AddWithValue("@Complemento", cliente.Complemento);
+                    cmd.Parameters.AddWithValue("@Cidade", cliente.Cidade);
+                    cmd.Parameters.AddWithValue("@Estado", cliente.Estado);
+                    cmd.Parameters.AddWithValue("@Cep", cliente.Cep);
 
-                conexao.Open();
-                cmd.ExecuteNonQuery();
-                conexao.Close();
+                    conexao.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+                finally
+                {
+                    conexao.Close();
+
+                }
+                
             }
         }
 
@@ -90,24 +107,38 @@ namespace AspNetCore_CrudAdo.Models
         {
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
-                string commandSQL = "Update Clientes set Nome = @Nome, Endereco = @Endereco, Numero = @Numero, Complemento = @Complemento, Cidade = @Cidade, Estado = @Estado, Cep = @Cep where ClienteId = @ClienteId";
+                try
+                {
+                    string commandSQL = "Update Clientes set Nome = @Nome, Endereco = @Endereco, Numero = @Numero, Complemento = @Complemento, Cidade = @Cidade, Estado = @Estado, Cep = @Cep where ClienteId = @ClienteId";
 
-                SqlCommand cmd = new SqlCommand(commandSQL, conexao);
-                cmd.CommandType = CommandType.Text;
+                    SqlCommand cmd = new SqlCommand(commandSQL, conexao);
+                    cmd.CommandType = CommandType.Text;
 
 
-                cmd.Parameters.AddWithValue("@ClienteId", cliente.ClienteId);
-                cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
-                cmd.Parameters.AddWithValue("@Endereco", cliente.Endereco);
-                cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
-                cmd.Parameters.AddWithValue("@Complemento", cliente.Complemento);
-                cmd.Parameters.AddWithValue("@Cidade", cliente.Cidade);
-                cmd.Parameters.AddWithValue("@Estado", cliente.Estado);
-                cmd.Parameters.AddWithValue("@Cep", cliente.Cep);
+                    cmd.Parameters.AddWithValue("@ClienteId", cliente.ClienteId);
+                    cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
+                    cmd.Parameters.AddWithValue("@Endereco", cliente.Endereco);
+                    cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
+                    cmd.Parameters.AddWithValue("@Complemento", cliente.Complemento);
+                    cmd.Parameters.AddWithValue("@Cidade", cliente.Cidade);
+                    cmd.Parameters.AddWithValue("@Estado", cliente.Estado);
+                    cmd.Parameters.AddWithValue("@Cep", cliente.Cep);
 
-                conexao.Open();
-                cmd.ExecuteNonQuery();
-                conexao.Close();
+                    conexao.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+                finally
+                {
+                    conexao.Close();
+
+                }
+            
+                
             }
         }
 
@@ -118,24 +149,37 @@ namespace AspNetCore_CrudAdo.Models
 
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
-                string sqlQuery = "SELECT * FROM Clientes WHERE ClienteId = " + id;
-                SqlCommand cmd = new SqlCommand(sqlQuery, conexao);
-
-                conexao.Open();
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    cliente.ClienteId = Convert.ToInt32(reader["ClienteId"]);
-                    cliente.Nome = reader["Nome"].ToString();
-                    cliente.Endereco = reader["Endereco"].ToString();
-                    cliente.Numero = reader["Numero"].ToString();
-                    cliente.Complemento = reader["Complemento"].ToString();
-                    cliente.Cidade = reader["Cidade"].ToString();
-                    cliente.Estado = reader["Estado"].ToString();
-                    cliente.Cep = reader["Cep"].ToString();
+                    string sqlQuery = "SELECT * FROM Clientes WHERE ClienteId = " + id;
+                    SqlCommand cmd = new SqlCommand(sqlQuery, conexao);
+
+                    conexao.Open();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        cliente.ClienteId = Convert.ToInt32(reader["ClienteId"]);
+                        cliente.Nome = reader["Nome"].ToString();
+                        cliente.Endereco = reader["Endereco"].ToString();
+                        cliente.Numero = reader["Numero"].ToString();
+                        cliente.Complemento = reader["Complemento"].ToString();
+                        cliente.Cidade = reader["Cidade"].ToString();
+                        cliente.Estado = reader["Estado"].ToString();
+                        cliente.Cep = reader["Cep"].ToString();
+                    }
                 }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+                
 
             }
             return cliente;
@@ -145,15 +189,28 @@ namespace AspNetCore_CrudAdo.Models
         {
             using (SqlConnection conexao = new SqlConnection(connectionString))
             {
-                string commnadSQL = "Delete from Clientes where ClienteId = @ClienteId";
-                SqlCommand cmd = new SqlCommand(commnadSQL, conexao);
-                cmd.CommandType = CommandType.Text;
+                try
+                {
+                    string commnadSQL = "Delete from Clientes where ClienteId = @ClienteId";
+                    SqlCommand cmd = new SqlCommand(commnadSQL, conexao);
+                    cmd.CommandType = CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@ClienteId", id);
+                    cmd.Parameters.AddWithValue("@ClienteId", id);
 
-                conexao.Open();
-                cmd.ExecuteReader();
-                conexao.Close();
+                    conexao.Open();
+                    cmd.ExecuteReader();
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+                finally
+                {
+                    conexao.Close();
+
+                }
+                
             }
         }
 
