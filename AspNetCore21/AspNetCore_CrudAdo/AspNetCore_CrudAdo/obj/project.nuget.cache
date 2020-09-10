@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lZWdoBGQ5+lpmcfSSIP8tKm5uhPSrxCnMnoyKqT8mMh2LGnxzG8nZaEnVio/JfPxrKEUQf5Id9rYQJFAEkktPQ==",
+  "dgSpecHash": "wYPeZvPrtzu8rHzxTi0+8gXM3TVvgM7S78FSKqse//xU6ZMgcGtrm7+PsRYgo5sjRivZa0sZAjfFbArQzcaDLQ==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj",
+  "projectFilePath": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",

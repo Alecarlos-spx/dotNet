@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projetos\\ExemplosTreino\\AspNetCore21\\CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj": {}
+    "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj": {}
   },
   "projects": {
-    "C:\\projetos\\ExemplosTreino\\AspNetCore21\\CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj": {
+    "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj",
+        "projectUniqueName": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj",
         "projectName": "AspNetCore_CrudAdo",
-        "projectPath": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj",
+        "projectPath": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\CrudAdo\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\obj\\",
+        "outputPath": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_CrudAdo\\AspNetCore_CrudAdo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
