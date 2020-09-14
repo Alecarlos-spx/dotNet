@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_CrudWebApi", "AspNetCore_CrudWebApi\AspNetCore_CrudWebApi.csproj", "{729F9626-65B0-4D9C-9136-50B48CAA068A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{729F9626-65B0-4D9C-9136-50B48CAA068A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729F9626-65B0-4D9C-9136-50B48CAA068A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729F9626-65B0-4D9C-9136-50B48CAA068A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729F9626-65B0-4D9C-9136-50B48CAA068A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED48C1B0-3C10-4D9E-A608-399FF74E1870}
+	EndGlobalSection
+EndGlobal
